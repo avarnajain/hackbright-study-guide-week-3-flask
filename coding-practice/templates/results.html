@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>
+   You are 
+   {% for message in session['message'] %}
+        {% if message == session['message'][-1] %}
+            {{message}}.
+        {% else %}
+            {{message}},
+        {% endif %}
+   {% endfor %}
+</p>
+
+{% endblock %}
